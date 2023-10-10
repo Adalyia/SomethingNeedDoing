@@ -6,6 +6,7 @@ using Dalamud.Game.ClientState.Keys;
 using Dalamud.Game.ClientState.Objects;
 using Dalamud.Game.Command;
 using Dalamud.Game.Gui;
+using Dalamud.Plugin.Services;
 using Dalamud.IoC;
 using Dalamud.Plugin;
 using SomethingNeedDoing.Managers;
@@ -52,60 +53,73 @@ namespace SomethingNeedDoing
         /// Gets the Dalamud chat gui.
         /// </summary>
         [PluginService]
-        internal static ChatGui ChatGui { get; private set; } = null!;
+        internal static IChatGui ChatGui { get; private set; } = null!;
 
         /// <summary>
         /// Gets the Dalamud client state.
         /// </summary>
         [PluginService]
-        internal static ClientState ClientState { get; private set; } = null!;
+        internal static IClientState ClientState { get; private set; } = null!;
+
 
         /// <summary>
         /// Gets the Dalamud command manager.
         /// </summary>
         [PluginService]
-        internal static CommandManager CommandManager { get; private set; } = null!;
+        internal static ICommandManager CommandManager { get; private set; } = null!;
 
         /// <summary>
         /// Gets the Dalamud condition manager.
         /// </summary>
         [PluginService]
-        internal static Condition Condition { get; private set; } = null!;
+        internal static ICondition Condition { get; private set; } = null!;
 
         /// <summary>
         /// Gets the Dalamud data manager.
         /// </summary>
         [PluginService]
-        internal static DataManager DataManager { get; private set; } = null!;
+        internal static IDataManager DataManager { get; private set; } = null!;
 
         /// <summary>
         /// Gets the Dalamud framework.
         /// </summary>
         [PluginService]
-        internal static Framework Framework { get; private set; } = null!;
+        internal static IFramework Framework { get; private set; } = null!;
 
         /// <summary>
         /// Gets the Dalamud game gui.
         /// </summary>
         [PluginService]
-        internal static GameGui GameGui { get; private set; } = null!;
+        internal static IGameGui GameGui { get; private set; } = null!;
 
         /// <summary>
         /// Gets the Dalamud keystate.
         /// </summary>
         [PluginService]
-        internal static KeyState KeyState { get; private set; } = null!;
+        internal static IKeyState KeyState { get; private set; } = null!;
 
         /// <summary>
         /// Gets the Dalamud object table.
         /// </summary>
         [PluginService]
-        internal static ObjectTable ObjectTable { get; private set; } = null!;
+        internal static IObjectTable ObjectTable { get; private set; } = null!;
 
         /// <summary>
         /// Gets the Dalamud target manager.
         /// </summary>
         [PluginService]
-        internal static TargetManager TargetManager { get; private set; } = null!;
+        internal static ITargetManager TargetManager { get; private set; } = null!;
+
+        /// <summary>
+        /// Gets the Dalamud game interop provider.
+        /// </summary>
+        [PluginService]
+        internal static IGameInteropProvider GameInteropProvider { get; private set; } = null!;
+
+        /// <summary>
+        /// Gets the Dalamud plugin log.
+        /// </summary>
+        [PluginService]
+        internal static IPluginLog Log { get; private set; } = null!;
     }
 }

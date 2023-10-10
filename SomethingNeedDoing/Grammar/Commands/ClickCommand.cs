@@ -54,7 +54,7 @@ internal class ClickCommand : MacroCommand
     /// <inheritdoc/>
     public async override Task Execute(ActiveMacro macro, CancellationToken token)
     {
-        PluginLog.Debug($"Executing: {this.Text}");
+        Service.Log.Debug($"Executing: {this.Text}");
 
         try
         {
@@ -66,7 +66,7 @@ internal class ClickCommand : MacroCommand
         }
         catch (Exception ex)
         {
-            PluginLog.Error(ex, "Unexpected click error");
+            Service.Log.Error(ex, "Unexpected click error");
             throw new MacroCommandError("Unexpected click error", ex);
         }
 

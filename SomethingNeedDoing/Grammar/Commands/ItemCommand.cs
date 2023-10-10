@@ -60,13 +60,13 @@ internal class ItemCommand : MacroCommand
     /// <inheritdoc/>
     public async override Task Execute(ActiveMacro macro, CancellationToken token)
     {
-        PluginLog.Debug($"Executing: {this.Text}");
+        Service.Log.Debug($"Executing: {this.Text}");
 
         var itemId = this.SearchItemId(this.itemName);
-        PluginLog.Debug($"Item found: {itemId}");
+        Service.Log.Debug($"Item found: {itemId}");
 
         var count = this.GetInventoryItemCount(itemId, this.itemQualityMod.IsHq);
-        PluginLog.Debug($"Item Count: {count}");
+        Service.Log.Debug($"Item Count: {count}");
         if (count == 0)
             throw new MacroCommandError("You do not have that item");
 

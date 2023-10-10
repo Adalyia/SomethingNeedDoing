@@ -60,7 +60,7 @@ internal class GateCommand : MacroCommand
     /// <inheritdoc/>
     public async override Task Execute(ActiveMacro macro, CancellationToken token)
     {
-        PluginLog.Debug($"Executing: {this.Text}");
+        Service.Log.Debug($"Executing: {this.Text}");
 
         if (this.echoMod.PerformEcho || Service.Configuration.LoopEcho)
         {

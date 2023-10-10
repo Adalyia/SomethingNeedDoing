@@ -226,7 +226,7 @@ internal partial class ActiveMacro : IDisposable
             var methods = type.GetMethods(flags);
             foreach (var method in methods)
             {
-                PluginLog.Debug($"Adding Lua method: {method.Name}");
+                Service.Log.Debug($"Adding Lua method: {method.Name}");
                 lua.RegisterFunction(method.Name, obj, method);
             }
         }
