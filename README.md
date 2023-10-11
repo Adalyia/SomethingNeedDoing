@@ -4,7 +4,7 @@ This plugin gives you control of a little Orc peon that does things for you.
 Specifically, crafting. 
 It's a better way of storing and running all your different macros.
 
-![](https://github.com/daemitus/SomethingNeedDoing/raw/master/res/game.png)
+![](https://github.com/Adalyia/SomethingNeedDoing/raw/master/res/game.png)
 
 ## Features
 - Folders, drag/drop re-ordering, and renaming of macros.
@@ -20,4 +20,4 @@ Note: Unless otherwise provided by the game or another plugin, these do not work
 * Type `/pcraft help` for some help.
 
 ## Lua functions
-[Go here.](https://github.com/daemitus/SomethingNeedDoing/blob/master/SomethingNeedDoing/Misc/ICommandInterface.cs)
+[Go here.](https://github.com/Adalyia/SomethingNeedDoing/blob/master/SomethingNeedDoing/Misc/ICommandInterface.cs)

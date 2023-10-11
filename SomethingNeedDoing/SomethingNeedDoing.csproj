@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Authors>daemitus, Adalyia</Authors>
     <Company>-</Company>
-    <Version>1.4.2.1</Version>
+    <Version>1.4.2.2</Version>
     <Description></Description>
     <Copyright></Copyright>
-    <PackageProjectUrl>https://github.com/daemitus/SomethingNeedDoing</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Adalyia/SomethingNeedDoing</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -41,20 +41,21 @@
       $(AssemblySearchPaths);
       $(DalamudLibPath);
     </AssemblySearchPaths>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Adalyia/SomethingNeedDoing</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\stylecop.json" />
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DalamudPackager" Version="2.1.12" />
-    <PackageReference Include="ILRepack" Version="2.1.0-beta1" GeneratePathProperty="true" />
+    <PackageReference Include="ILRepack" Version="2.0.18" GeneratePathProperty="true" />
     <PackageReference Include="NLua" Version="1.6.3" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <Reference Include="Dalamud" Private="False" />
     <Reference Include="FFXIVClientStructs" Private="False" />
     <Reference Include="ImGui.NET" Private="False" />

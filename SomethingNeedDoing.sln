@@ -4,11 +4,6 @@ VisualStudioVersion = 17.0.31512.422
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SomethingNeedDoing", "SomethingNeedDoing\SomethingNeedDoing.csproj", "{7A28CFC7-5A98-41AD-8129-D835AEE9645A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github Actions", "Github Actions", "{635B3EB7-FE24-4F29-B35E-00CAC60CD76E}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\build.yml = .github\workflows\build.yml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F2D29D3-BCD8-4D9B-8366-C8134968AF64}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
