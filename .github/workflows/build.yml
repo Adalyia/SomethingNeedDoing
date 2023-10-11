@@ -1,10 +1,7 @@
 name: Build
 
 on: 
-  workflow_dispatch:
-  push:
-    branches:
-    - master
+  - push
 
 env:
   PUBLIC_NAME: Something Need Doing
