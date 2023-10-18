@@ -336,6 +336,18 @@ public class CommandInterface : ICommandInterface
     }
 
     /// <inheritdoc/>
+    public unsafe void CloseAddon(string addonName)
+    {
+        var ptr = Service.GameGui.GetAddonByName(addonName, 1);
+        if (ptr == IntPtr.Zero)
+            throw new MacroCommandError($"Could not find {addonName} addon");
+
+        var addon = (AtkUnitBase*)ptr;
+
+        addon->Close(true);
+}
+
+    /// <inheritdoc/>
     public unsafe string GetNodeText(string addonName, params int[] nodeNumbers)
     {
         if (nodeNumbers.Length == 0)

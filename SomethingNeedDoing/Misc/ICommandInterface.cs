@@ -163,6 +163,12 @@ public interface ICommandInterface
     public bool IsAddonReady(string addonName);
 
     /// <summary>
+    /// Closes an open addon window.
+    /// </summary>
+    /// <param name="addonName">Addon name.</param>
+    public unsafe void CloseAddon(string addonName);
+
+    /// <summary>
     /// Get the text of a TextNode by its index number. You can find this by using the addon inspector.
     /// In general, these numbers do not change.
     /// </summary>
